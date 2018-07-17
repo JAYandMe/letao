@@ -1,0 +1,14 @@
+.mui-input-group{
+    margin-top: 44px;
+}
+.vCode{
+    position: relative;
+}
+.getCode{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right:10px;
+    font-size: 14px;
+    color:#006699;
+}
