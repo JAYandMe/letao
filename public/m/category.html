@@ -14,8 +14,9 @@
     <script src="assets/mui/js/mui.js"></script>
     <script src="assets/mui/js/mui.min.js"></script>
     <script src="./assets/artTemplate/template-native.js"></script>
-    <script src="js/category.js"></script>
     <script src="js/public.js"></script>
+    <script src="js/category.js"></script>
+
 </head>
 
 <body>
@@ -49,7 +50,7 @@
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
                     <div class="links" id="links">
-
+                       
                     </div>
                 </div>
             </div>
@@ -58,7 +59,7 @@
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
                     <div class="waper" id="rightCate">
-
+                       
                     </div>
                 </div>
             </div>
@@ -66,24 +67,22 @@
     </div>
 
     <script id="category-first" type="text/html">
-        <% for (var i = 0; i < result.length; i++){ %>
-            <a href="#">
-                <%=result[i].categoryName %>
-            </a>
-            <% } %>
+        <% for(var i = 0; i < result.length; i++) { %>
+        <a href="#" class="item getSecond" data-id="<%=i %>"><%=result[i].categoryName %></a>
+        <% } %>
     </script>
 
     <script id="category-second" type="text/html">
-        <% for (var i = 0; i < result.length; i++) {%>
+        <% for(var i = 0; i < result.length; i++ ) { %>
         <li>
-            <a href="#" class="items getSecond">
+            <a href="#" class="items">
                 <img src="<%=result[i].brandLogo %>" alt="">
                 <p><%=result[i].brandName %></p>
             </a>
         </li>
-        <% } %>
+        <% } %> 
 
-        <% if (!result.length){%>
+        <% if(!result.length){ %>
             <span>暂无数据</span>
             <% } %>
     </script>
